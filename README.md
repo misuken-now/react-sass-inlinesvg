@@ -176,14 +176,14 @@ import classNames from "./example.module.scss";
 export const Example = () => {
   return (
     <div>
-      {/* SVGにclassNameを渡すスタンダードな方法 */}
+      {/* Standard way to pass className to SVG. */}
       <button className={classNames.reactButton}>
         <SVG className={classNames.svg} /> React
       </button>
       <button className={classNames.sassButton}>
         <SVG className={classNames.svg} /> Sass
       </button>
-      {/* SVGにclassNameを渡さずに利用する方法 */}
+      {/* How to use SVG without passing className. */}
       <button className={classNames.button}>
         <SVG /> SVG
       </button>
@@ -238,7 +238,7 @@ export const Example = () => {
   &:hover .svg,
    // Selector for preventing flickering.(Moment after the hover ends, when the SVG has not yet been rewritten)
    &:not(:hover) .svg[data-svg-name="#{svg.$Svg}"] {
-    fill: gray; // ボタンにホバーするとSVGの色が変わる
+    fill: gray; // SVG changes color when hovering over a button.
   }
 
   &:active .svg {
