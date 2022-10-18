@@ -1,0 +1,88 @@
+@use "." as svg;
+
+@mixin -base {
+  width: 50px;
+  height: 50px;
+}
+
+// 表示状態からホバーで色変え
+.show-hover-color {
+  @include -base;
+  @include svg.show(svg.$React);
+
+  &:hover * {
+    fill: gray;
+  }
+}
+
+// 表示状態からホバーで切り替え
+.show-hover-show {
+  @include -base;
+  @include svg.show(svg.$React);
+
+  &:hover {
+    @include svg.show(svg.$Sass);
+  }
+}
+
+// 表示状態からホバーで不可視化
+.show-hover-hidden {
+  @include -base;
+  @include svg.show(svg.$React);
+
+  &:hover {
+    // :hoverを使う場合は svg.hidden ではなく svg.hidden-opacity を使う
+    @include svg.hidden-opacity();
+  }
+}
+
+// 不可視状態からホバーで可視化
+.hidden-hover-show {
+  @include -base;
+  // :hoverを使う場合は svg.$HIDDEN ではなく svg.$HIDDEN-OPACITY を使う
+  @include svg.hidden-opacity;
+
+  &:hover {
+    @include svg.show(svg.$Sass);
+  }
+}
+
+// 表示状態から押下で非表示
+.show-click-none {
+  @include -base;
+  @include svg.show(svg.$React);
+
+  pointer-events: none;
+
+  :active & {
+    @include svg.none;
+  }
+}
+
+// 非表示状態から押下で表示
+.none-click-show {
+  @include -base;
+  @include svg.none;
+
+  pointer-events: none;
+
+  :active & {
+    @include svg.show(svg.$Sass);
+  }
+}
+
+// 表示状態から押下で要素自体を削除
+.show-click-null {
+  @include -base;
+  @include svg.show(svg.$React);
+
+  pointer-events: none;
+
+  :active & {
+    @include svg.null;
+  }
+}
+
+.svg-catalog {
+  @include svg.story-catalog;
+}

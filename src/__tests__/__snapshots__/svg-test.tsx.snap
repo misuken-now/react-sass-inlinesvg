@@ -1,0 +1,3527 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Svg fetch中 A->Bと更新するときも読み込み中になること 1`] = `
+<svg
+  aria-busy="true"
+  data-svg-name="BarIcon"
+  data-svg-status="loading"
+/>
+`;
+
+exports[`Svg fetch中 読み込み中になること 1`] = `
+<svg
+  aria-busy="true"
+  data-svg-name="FooIcon"
+  data-svg-status="loading"
+/>
+`;
+
+exports[`Svg props defaultName指定時 HIDDEN のときは不可視要素を表示すること 1`] = `
+<svg
+  data-svg-name="HIDDEN"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg props defaultName指定時 NONE のときは不可視要素を表示すること 1`] = `
+<svg
+  data-svg-name="NONE"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg props defaultName指定時 NULLのときは要素を表示しないこと 1`] = `null`;
+
+exports[`Svg props defaultName指定時 animationstartを経由せずに可視要素を表示すること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <polygon
+    points=""
+  />
+</svg>
+`;
+
+exports[`Svg props description SVGが HIDDEN の場合はdescription無視されること 1`] = `
+<svg
+  data-svg-name="HIDDEN"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg props description SVGが NONE の場合はdescription無視されること 1`] = `
+<svg
+  data-svg-name="NONE"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg props description SVGが NULL の場合はdescription無視されること 1`] = `
+<svg
+  aria-busy="true"
+  data-svg-status="loading"
+/>
+`;
+
+exports[`Svg props description descriptionを指定できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <desc>
+    newDescription
+  </desc>
+  <polygon
+    points=""
+  />
+</svg>
+`;
+
+exports[`Svg props description 後からdescriptionを更新できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    updateDescription
+  </title>
+  <polygon
+    points=""
+  />
+</svg>
+`;
+
+exports[`Svg props description 既存のdescriptionを上書きできること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="TitleDescriptionIcon"
+  data-svg-status="complete"
+  viewBox="0 0 80 80"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <desc>
+    newDescription
+  </desc>
+  <title>
+    TITLE
+  </title>
+</svg>
+`;
+
+exports[`Svg props innerRef refで要素を得られること 1`] = `
+<svg
+  aria-busy="true"
+/>
+`;
+
+exports[`Svg props onError 未定義のアニメーション名でonErrorが発生すること 1`] = `
+<svg
+  data-svg-name="ThrowError"
+  data-svg-status="error"
+/>
+`;
+
+exports[`Svg props title SVGが HIDDEN の場合はtitleが無視されること 1`] = `
+<svg
+  data-svg-name="HIDDEN"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg props title SVGが NONE の場合はtitleが無視されること 1`] = `
+<svg
+  data-svg-name="NONE"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg props title SVGが NULL の場合はtitleが無視されること 1`] = `
+<svg
+  aria-busy="true"
+  data-svg-status="loading"
+/>
+`;
+
+exports[`Svg props title titleを指定できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    newTitle
+  </title>
+  <polygon
+    points=""
+  />
+</svg>
+`;
+
+exports[`Svg props title 後からtitleを更新できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    updateTitle
+  </title>
+  <polygon
+    points=""
+  />
+</svg>
+`;
+
+exports[`Svg props title 既存のtitleを上書きできること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="TitleDescriptionIcon"
+  data-svg-status="complete"
+  viewBox="0 0 80 80"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>
+    newTitle
+  </title>
+  <desc>
+    DESC
+  </desc>
+</svg>
+`;
+
+exports[`Svg setupSvg uniquifyIDs should not uniquify non-id hrefs 1`] = `
+<div>
+  <svg
+    data-attribute-names="width height viewBox version xmlns xmlns:xlink preserveAspectRatio"
+    data-svg-name="DataHref"
+    data-svg-status="complete"
+    data-testid="svg1"
+    height="400px"
+    preserveAspectRatio="xMidYMid"
+    version="1.1"
+    viewBox="0 0 600 400"
+    width="600px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    
+    
+    <g>
+      
+        
+      <image
+        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAQAAAD41aSMAAAABGdBTUEAALGPC/xhBQAABKhJREFUeNrtnQmL10UAhp9SyyOzLI+0stLUMu0ytUvL6MQSCQmRkBAREREJCYmQEBGJkJAQCZGQEBHxIsvovjTD1DI1zWozr2111fXaXXcn5kv0zszvfZ9v8DwgsjP/+YHneZ7neZ7neZ7neZ7neZ7nZbB19LYE5QJnmM7lFqELENnCYKtQBgg0MZ/21qELEDnAaAtRBogs5zpLUQYI1DLRWpQBIpu5zWqUAQLnmE1b69EFiOxgqAUpAwRaWMRVlqQLEKlhjDUpA0RW0dOqlAEC9UzhMuvSBYh8zUALUwYINDKXKyxNFyCyl0etTRkg0MpSrrE6XYDIUcZbnjJAZCM3W6AyQKCBmT7OVAaIbOMea1QGCDSzkA5WqQsQOchTlqkMEFlBNwtVBgjUMclKlQEin9HPWpUBAheYQzur1QWI/MwIy1UGiMeZi+lswboAkUOMtWJlgMgaelmzMkDgNNN8nKkMEPmOQZatDBAvwM/jSgvXBYj8xmNWrgwQWUZXa1cGCBxngsUrA0Q+4hbLVwaIF+BfpY0DBCnbud8BtFzibTo5gJa/eNYB1KykhwNoOcnkKv7FKCTFlwxwAC0XeaNaF+BDgvzKww6gpZUldHEALUd40QHUrOdGB9ByhhllX4APGbCVIQ6gpZkFpV6AD9nwO084gJr3y3vPK2TGv7zsAGo+Kek9r5Al53mtlPe8QrbsZJgDaGnhnfzf8wqZ8zfPO4Ca1dzgAFpOMTXX48xQDN9whwNoaeTN/C7Ah8LYx0gHUB9nvpfTe16hSI7xkgOo+TCP97xCwZxlVvoX4EPh/Mi9DqC+AP8WHR1Ayx887QBqPkjzPa9QIU7wigOo+ZzbHUDLBV5P6T2vUEl+4UEHUB9nvsvVDqDlH8Y5gDbAWAdQ/hPU2f8EqUjoUU3/N9QB/leSe1i5SvLr/KcI/zGuogES/rxE+fKbfSCjPZJM/BNDJctvYFb6vzEuV/9GX0vRcdQXs3w1saIBsvvYbmnX07N7basc/Zl+cL0M+fX+iZKS1fQk2+Uuv4YxZL28jxX9Q20hO3iAApanfD/WIWWzn6vRUesHm5T4yTIhBxhNgctDfhMLaA8OoGELgyl2qcv308VS1vnxbh2H/Xy98lhxSRq/X6lmgN08RGWWmvz4EZ924AAavqA/FVs68k8wmQouFf0r6Q4OoOFPnqGyU8uPn7PtCA6gYTv3UfHp5J/1J82VATbRx/JVAY4xweJVAVpZxrXWrgqwj1FWrgrQyLz83jYvJ8C33GnZqgCnmJbr5fESAqzJ+QsvuQc4xAtWrArQwuI03qSqZoBdDLdcVYDzzCnl8niOAT6lr7WqAtQxyUp1AVZwvYWqAhzkSctUBWhmIR2sUhXgB+62RlWABmaWfXk87QAbuMkCVQGOMN7yVAFaWUoXq1MF2MMj1qYKcJG5+b1JVU6ArxhgYaoA9UzxsaIuwCp6WJUqQA3PWZMqwCUW0cmSVAF+YqgFqQKcY7Yvj+sCfMytVqMKUMtEa9EFWE5XS1EF2M/jFqIK0MT8Ut+kyiHA99xlFaoAp5nuY0Xd1tLbEjzP8zzP8zzP8zzP8zzP8zwv6f0HWXdaCS3r6mYAAAAASUVORK5CYII=
+"
+      />
+      
+    
+    </g>
+    
+
+  </svg>
+  <svg
+    data-attribute-names="width height viewBox version xmlns xmlns:xlink preserveAspectRatio"
+    data-svg-name="DataHref"
+    data-svg-status="complete"
+    data-testid="svg2"
+    height="400px"
+    preserveAspectRatio="xMidYMid"
+    version="1.1"
+    viewBox="0 0 600 400"
+    width="600px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    
+    
+    <g>
+      
+        
+      <image
+        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAQAAAD41aSMAAAABGdBTUEAALGPC/xhBQAABKhJREFUeNrtnQmL10UAhp9SyyOzLI+0stLUMu0ytUvL6MQSCQmRkBAREREJCYmQEBGJkJAQCZGQEBHxIsvovjTD1DI1zWozr2111fXaXXcn5kv0zszvfZ9v8DwgsjP/+YHneZ7neZ7neZ7neZ7neZ7nZbB19LYE5QJnmM7lFqELENnCYKtQBgg0MZ/21qELEDnAaAtRBogs5zpLUQYI1DLRWpQBIpu5zWqUAQLnmE1b69EFiOxgqAUpAwRaWMRVlqQLEKlhjDUpA0RW0dOqlAEC9UzhMuvSBYh8zUALUwYINDKXKyxNFyCyl0etTRkg0MpSrrE6XYDIUcZbnjJAZCM3W6AyQKCBmT7OVAaIbOMea1QGCDSzkA5WqQsQOchTlqkMEFlBNwtVBgjUMclKlQEin9HPWpUBAheYQzur1QWI/MwIy1UGiMeZi+lswboAkUOMtWJlgMgaelmzMkDgNNN8nKkMEPmOQZatDBAvwM/jSgvXBYj8xmNWrgwQWUZXa1cGCBxngsUrA0Q+4hbLVwaIF+BfpY0DBCnbud8BtFzibTo5gJa/eNYB1KykhwNoOcnkKv7FKCTFlwxwAC0XeaNaF+BDgvzKww6gpZUldHEALUd40QHUrOdGB9ByhhllX4APGbCVIQ6gpZkFpV6AD9nwO084gJr3y3vPK2TGv7zsAGo+Kek9r5Al53mtlPe8QrbsZJgDaGnhnfzf8wqZ8zfPO4Ca1dzgAFpOMTXX48xQDN9whwNoaeTN/C7Ah8LYx0gHUB9nvpfTe16hSI7xkgOo+TCP97xCwZxlVvoX4EPh/Mi9DqC+AP8WHR1Ayx887QBqPkjzPa9QIU7wigOo+ZzbHUDLBV5P6T2vUEl+4UEHUB9nvsvVDqDlH8Y5gDbAWAdQ/hPU2f8EqUjoUU3/N9QB/leSe1i5SvLr/KcI/zGuogES/rxE+fKbfSCjPZJM/BNDJctvYFb6vzEuV/9GX0vRcdQXs3w1saIBsvvYbmnX07N7basc/Zl+cL0M+fX+iZKS1fQk2+Uuv4YxZL28jxX9Q20hO3iAApanfD/WIWWzn6vRUesHm5T4yTIhBxhNgctDfhMLaA8OoGELgyl2qcv308VS1vnxbh2H/Xy98lhxSRq/X6lmgN08RGWWmvz4EZ924AAavqA/FVs68k8wmQouFf0r6Q4OoOFPnqGyU8uPn7PtCA6gYTv3UfHp5J/1J82VATbRx/JVAY4xweJVAVpZxrXWrgqwj1FWrgrQyLz83jYvJ8C33GnZqgCnmJbr5fESAqzJ+QsvuQc4xAtWrArQwuI03qSqZoBdDLdcVYDzzCnl8niOAT6lr7WqAtQxyUp1AVZwvYWqAhzkSctUBWhmIR2sUhXgB+62RlWABmaWfXk87QAbuMkCVQGOMN7yVAFaWUoXq1MF2MMj1qYKcJG5+b1JVU6ArxhgYaoA9UzxsaIuwCp6WJUqQA3PWZMqwCUW0cmSVAF+YqgFqQKcY7Yvj+sCfMytVqMKUMtEa9EFWE5XS1EF2M/jFqIK0MT8Ut+kyiHA99xlFaoAp5nuY0Xd1tLbEjzP8zzP8zzP8zzP8zzP8zwv6f0HWXdaCS3r6mYAAAAASUVORK5CYII=
+"
+      />
+      
+    
+    </g>
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Svg setupSvg uniquifyIDs should uniquify ids with a custom uniqueHash 1`] = `
+<div>
+  <svg
+    data-attribute-names="width height viewBox version xmlns xmlns:xlink preserveAspectRatio"
+    data-svg-name="Play"
+    data-svg-status="complete"
+    data-testid="svg1"
+    height="32px"
+    preserveAspectRatio="xMidYMid"
+    version="1.1"
+    viewBox="0 0 32 32"
+    width="32px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    
+    
+    <defs>
+      
+        
+      <radialgradient
+        cx="50%"
+        cy="50%"
+        fx="50%"
+        fy="50%"
+        id="radialGradient-1__test"
+        r="50%"
+      >
+        
+            
+        <stop
+          offset="0%"
+          stop-color="#FFFFFF"
+        />
+        
+            
+        <stop
+          offset="100%"
+          stop-color="#FF0000"
+        />
+        
+        
+      </radialgradient>
+      
+        
+      <g
+        id="triangle__test"
+      >
+        
+            
+        <polygon
+          fill="#000"
+          points="12 9 12 23 23 16"
+        />
+        
+        
+      </g>
+      
+    
+    </defs>
+    
+    
+    <g>
+      
+        
+      <circle
+        cx="16"
+        cy="16"
+        fill="url(#radialGradient-1__test)"
+        r="16"
+      />
+      
+        
+      <use
+        xlink:href="#triangle__test"
+      />
+      
+    
+    </g>
+    
+
+  </svg>
+  <svg
+    data-attribute-names="width height viewBox version xmlns xmlns:xlink preserveAspectRatio"
+    data-svg-name="Play"
+    data-svg-status="complete"
+    data-testid="svg2"
+    height="32px"
+    preserveAspectRatio="xMidYMid"
+    version="1.1"
+    viewBox="0 0 32 32"
+    width="32px"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+  >
+    
+    
+    <defs>
+      
+        
+      <radialgradient
+        cx="50%"
+        cy="50%"
+        fx="50%"
+        fy="50%"
+        id="radialGradient-1__test"
+        r="50%"
+      >
+        
+            
+        <stop
+          offset="0%"
+          stop-color="#FFFFFF"
+        />
+        
+            
+        <stop
+          offset="100%"
+          stop-color="#FF0000"
+        />
+        
+        
+      </radialgradient>
+      
+        
+      <g
+        id="triangle__test"
+      >
+        
+            
+        <polygon
+          fill="#000"
+          points="12 9 12 23 23 16"
+        />
+        
+        
+      </g>
+      
+    
+    </defs>
+    
+    
+    <g>
+      
+        
+      <circle
+        cx="16"
+        cy="16"
+        fill="url(#radialGradient-1__test)"
+        r="16"
+      />
+      
+        
+      <use
+        xlink:href="#triangle__test"
+      />
+      
+    
+    </g>
+    
+
+  </svg>
+</div>
+`;
+
+exports[`Svg ローディング中 読み込み中になること 1`] = `
+<svg
+  aria-busy="true"
+  data-svg-name="FooIcon"
+  data-svg-status="loading"
+/>
+`;
+
+exports[`Svg 全体処理 10種類10個ずつ100個表示の場合 defaultName指定なし 初期描画後 1`] = `
+<div>
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+  <svg
+    aria-busy="true"
+  />
+</div>
+`;
+
+exports[`Svg 全体処理 10種類10個ずつ100個表示の場合 defaultName指定なし 徐々に変化していくこと 1`] = `
+<div>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+</div>
+`;
+
+exports[`Svg 全体処理 10種類10個ずつ100個表示の場合 defaultName指定時 初期描画後 1`] = `
+<div>
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="0"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="1"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="2"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="3"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="4"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="5"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="6"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="7"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="8"
+    data-svg-status="loading"
+  />
+  <svg
+    aria-busy="true"
+    data-svg-name="9"
+    data-svg-status="loading"
+  />
+</div>
+`;
+
+exports[`Svg 全体処理 10種類10個ずつ100個表示の場合 defaultName指定時 徐々に変化していくこと 1`] = `
+<div>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="0"
+    data-svg-status="complete"
+    viewBox="0 0 0 0"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      0
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="1"
+    data-svg-status="complete"
+    viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      1
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="2"
+    data-svg-status="complete"
+    viewBox="0 0 2 2"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      2
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="3"
+    data-svg-status="complete"
+    viewBox="0 0 3 3"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      3
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="4"
+    data-svg-status="complete"
+    viewBox="0 0 4 4"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      4
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="5"
+    data-svg-status="complete"
+    viewBox="0 0 5 5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      5
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="6"
+    data-svg-status="complete"
+    viewBox="0 0 6 6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      6
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="7"
+    data-svg-status="complete"
+    viewBox="0 0 7 7"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      7
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="8"
+    data-svg-status="complete"
+    viewBox="0 0 8 8"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      8
+    </title>
+  </svg>
+  <svg
+    data-attribute-names="xmlns viewBox"
+    data-svg-name="9"
+    data-svg-status="complete"
+    viewBox="0 0 9 9"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      9
+    </title>
+  </svg>
+</div>
+`;
+
+exports[`Svg 初期状態 スケルトンが表示されること 1`] = `
+<svg
+  aria-busy="true"
+/>
+`;
+
+exports[`Svg 特殊なSVGの指定 svg_HIDDEN のイベントを発生させるとSVGが切り替わること 1`] = `
+<svg
+  data-svg-name="HIDDEN"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg 特殊なSVGの指定 svg_NONE のイベントを発生させるとSVGが切り替わること 1`] = `
+<svg
+  data-svg-name="NONE"
+  data-svg-status="complete"
+/>
+`;
+
+exports[`Svg 特殊なSVGの指定 svg_NULL のイベントを発生させるとSVGが切り替わること 1`] = `
+<svg
+  aria-busy="true"
+/>
+`;
+
+exports[`Svg 読み込み完了時 A->B->Aに更新できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <polygon
+    points=""
+  />
+</svg>
+`;
+
+exports[`Svg 読み込み完了時 A->Bと更新できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="BarIcon"
+  data-svg-status="complete"
+  viewBox="0 0 80 80"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d=""
+    style="fill-rule:evenodd"
+  />
+</svg>
+`;
+
+exports[`Svg 読み込み完了時 FooIconに更新できること 1`] = `
+<svg
+  data-attribute-names="xmlns viewBox"
+  data-svg-name="FooIcon"
+  data-svg-status="complete"
+  viewBox="0 0 36 36"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <polygon
+    points=""
+  />
+</svg>
+`;

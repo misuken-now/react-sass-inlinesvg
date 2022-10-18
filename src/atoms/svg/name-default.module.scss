@@ -1,0 +1,62 @@
+@use "." as *;
+
+$background-image: linear-gradient(180deg, #eee 0%, #888 100%);
+
+// plane
+.plane {
+  @include show(null, 56px);
+}
+
+.plane-fill {
+  @include show(null, 56px, #000);
+}
+
+// circle
+.circle {
+  @include show-circle(null, 56px, #ddd);
+}
+
+.circle-fill {
+  @include show-circle(null, 56px, #ddd, #000);
+}
+
+.circle-border {
+  @include show-circle(null, 56px, #ddd, $border-width: 4px);
+}
+
+.circle-fill-border {
+  @include show-circle(null, 56px, #ddd, #000, $border-width: 4px);
+}
+
+// square
+.square {
+  @include show-square(null, 56px, $background-image: $background-image);
+}
+
+.square-fill {
+  @include show-square(
+    null,
+    56px,
+    $background-image: $background-image,
+    $fill-color: #000
+  );
+}
+
+.square-border {
+  @include show-square(
+    null,
+    56px,
+    $border-width: 4px,
+    $background-image: $background-image
+  );
+}
+
+.square-fill-border {
+  @include show-square(
+    null,
+    56px,
+    $border-width: 4px,
+    $background-image: $background-image,
+    $fill-color: #000
+  );
+}

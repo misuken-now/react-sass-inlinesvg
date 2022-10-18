@@ -1,0 +1,230 @@
+@use "sass:meta";
+@use "sass:map";
+@use "sass:list";
+@use "smart-svg";
+
+$css-modules: false !default;
+$svg-names: () !default;
+$suffix: "";
+
+@if $css-modules {
+  $suffix: ":global";
+}
+
+// 要素自体を描画しない(以降のsvgの切り替えは不可)
+$NULL: "NULL";
+// 見えず領域も存在せず、操作も反応しない display: none に近い(svgの切り替えは可能)
+$NONE: "NONE";
+// 見えないだけで領域も存在し、操作も反応する visibility: hidden に近い(svgの切り替えは可能)
+$HIDDEN: "HIDDEN";
+// HIDDENとの違いはopacityで不可視化するため、:hoverでも反応する
+$HIDDEN-OPACITY: "HIDDEN_OPACITY";
+
+$-HIDDEN_MODE_VISIBILITY: "visibility";
+$-HIDDEN_MODE_OPACITY: "opacity";
+
+@mixin -animation($svg-name) {
+  $svg-names: map.values($svg-names);
+
+  $hiddenMode: $-HIDDEN_MODE_VISIBILITY;
+
+  @if $svg-name == "HIDDEN_OPACITY" {
+    $svg-name: $HIDDEN;
+    $hiddenMode: $-HIDDEN_MODE_OPACITY;
+  }
+  @if $svg-name !=
+    $NULL and
+    $svg-name !=
+    $NONE and
+    $svg-name !=
+    $HIDDEN and
+    list.index($svg-names, $svg-name) ==
+    null
+  {
+    @error '"#{$svg-name}" is not defined.';
+  }
+
+  // 不可視系の場合は読み込み中の表現を出さない
+  @if $svg-name != $NULL and $svg-name != $NONE and $svg-name != $HIDDEN {
+    &[aria-busy="true"]:empty {
+      @content;
+    }
+  }
+
+  // トリガーセレクタ: animationstartイベントを発動するために使用されるセレクター
+  // - animationstartイベントのハンドリングで、要素へsvgNameが反映された瞬間に適用が解除されます
+  &[data-svg-status]::before#{$suffix} {
+    // NOTE: contentも変更しないとFirefoxではanimationstartが発生しません
+    content: "#{$svg-name}";
+    // アニメーションはpaused指定されているので、長い時間に指定しても問題ありません。
+    // 逆に短すぎると処理に負荷が掛かっているときにアニメーションがスキップされるので注意。
+    animation: svg_#{$svg-name} 1s paused !important;
+  }
+
+  @if $svg-name == $NONE {
+    // NONEは`display: none`相当ですが、以降もanimationstartは発火する必要があるので他のスタイルでそれ相当にする
+    &[data-svg-status][data-svg-name="#{$NONE}"] {
+      position: fixed !important;
+      pointer-events: none !important;
+      visibility: hidden !important;
+    }
+  }
+  @if $svg-name == $HIDDEN {
+    &[data-svg-status][data-svg-name="#{$HIDDEN}"] {
+      @if $hiddenMode == $-HIDDEN_MODE_VISIBILITY {
+        visibility: hidden !important;
+      } @else if $hiddenMode == $-HIDDEN_MODE_OPACITY {
+        opacity: 0 !important;
+      }
+    }
+  }
+}
+@mixin show(
+  $svg-name,
+  $size: null,
+  $fill-color: null,
+  $display: inline-block,
+  $width: $size,
+  $height: $size
+) {
+  @include smart-svg.box($display, $width, $height);
+  @include -show($svg-name, $fill-color) {
+    @content;
+  }
+}
+@mixin -show($svg-name, $fill-color) {
+  @if $svg-name != null {
+    @include -animation($svg-name) {
+      @content;
+    }
+  }
+
+  * {
+    pointer-events: none;
+
+    @if $fill-color != null {
+      fill: $fill-color;
+    }
+  }
+}
+@mixin null() {
+  @include -animation($NULL);
+}
+@mixin none($size: null) {
+  @if $size != null {
+    width: $size;
+    height: $size;
+  }
+  @include -animation($NONE);
+}
+@mixin hidden($size: null) {
+  @if $size != null {
+    width: $size;
+    height: $size;
+  }
+  @include -animation($HIDDEN);
+}
+@mixin hidden-opacity($size: null) {
+  @if $size != null {
+    width: $size;
+    height: $size;
+  }
+  @include -animation($HIDDEN-OPACITY);
+}
+@mixin placeholder {
+  box-sizing: border-box;
+  border: solid 2px #888;
+  border-radius: 50%;
+}
+@mixin show-square(
+  $svg-name,
+  $size: null,
+  $background-color: null,
+  $fill-color: null,
+  $background-image: null,
+  $border-radius: 25%,
+  $display: null,
+  $ratio: 1.4,
+  $width: $size,
+  $height: $size,
+  $svg-size: null,
+  $svg-width: $svg-size,
+  $svg-height: $svg-size,
+  $border-style: null,
+  $border-width: null,
+  $border-color: null
+) {
+  @include smart-svg.box($display, $width, $height, border-box);
+  @include smart-svg.border(
+    $border-radius,
+    $border-style,
+    $border-width,
+    $border-color
+  );
+  @include smart-svg.background($background-color, $background-image);
+  @include -show($svg-name, $fill-color) {
+    @content;
+  }
+
+  $svg-width: smart-svg.calculate-svg-size($svg-width, $width, $ratio);
+  $svg-height: smart-svg.calculate-svg-size($svg-height, $height, $ratio);
+
+  @if $border-width == null {
+    padding: calc((#{$width} - #{$svg-width}) / 2)
+      calc((#{$height} - #{$svg-width}) / 2);
+  } @else {
+    padding: calc((#{$width} - #{$svg-width} - #{$border-width}) / 2)
+      calc((#{$height} - #{$svg-width} - #{$border-width}) / 2);
+  }
+
+  // 角丸のときに欠ける場合があるので必要
+  overflow: visible;
+}
+
+// 円形塗りのタイプ
+@mixin show-circle($args...) {
+  @include show-square($args..., $border-radius: 50%) {
+    @content;
+  }
+}
+
+// ストーリーのカタログ用のスタイル
+// $width - svgの幅
+// $height - svgの高さ
+// $background-color - カタログの背景色
+// $svg-names - svg定義名のmap
+@mixin story-catalog($width: 32px, $height: 32px, $background-color: #eee) {
+  display: flex;
+  flex-wrap: wrap;
+
+  > section {
+    width: 120px;
+    margin: 1px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $background-color;
+
+    > h1 {
+      margin: 0 0 8px;
+      font-size: 10px;
+      overflow-wrap: break-word;
+    }
+
+    > svg {
+      width: $width;
+      height: $height;
+    }
+
+    @each $svg-name in map.keys($svg-names) {
+      &[data-svg-name="#{$svg-name}"] {
+        > svg {
+          @include show($svg-name) {
+            @include placeholder;
+          }
+        }
+      }
+    }
+  }
+}

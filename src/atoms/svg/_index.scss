@@ -1,0 +1,5 @@
+@use "sass:meta";
+@use "./names";
+
+@forward "../../.." with ($css-modules: true, $svg-names: meta.module-variables("names"));
+@forward "./names";

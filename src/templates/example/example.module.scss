@@ -1,0 +1,66 @@
+// @use "../../atoms/svg"; で _index.scss を読み込み、 svg という名前空間で使う意味になります
+// Sassの@useの名前空間の使い方は公式のドキュメントを参考にしてください
+// https://sass-lang.com/documentation/at-rules/use#choosing-a-namespace
+@use "../../atoms/svg";
+
+.react-button {
+  font-size: 48px;
+
+  .svg {
+    @include svg.show(svg.$React, 0.8em); // Reactのロゴを表示する
+  }
+
+  &:hover .svg {
+    @include svg.show(svg.$Sass); // ボタンにホバーするとSassのロゴを表示する
+  }
+
+  &:active .svg {
+    @include svg.show(svg.$Svg); // ボタンを押下するとSVGのロゴを表示する
+  }
+}
+
+.sass-button {
+  font-size: 48px;
+
+  .svg {
+    @include svg.show(svg.$Sass, 0.8em); // Sassのロゴを表示する
+  }
+
+  &:hover .svg {
+    @include svg.show(svg.$Svg);
+  }
+
+  &:hover .svg,
+    // チラツキ防止用のセレクタ(ホバー終了後、まだSVGが書き換わっていない瞬間)
+    &:not(:hover) .svg[data-svg-name="#{svg.$Svg}"] {
+    fill: gray; // ボタンにホバーするとSVGの色が変わる
+  }
+
+  &:active .svg {
+    @include svg.none; // ボタンを押下すると要素が領域を維持せず不可視化される(display: none 相当)
+  }
+}
+
+.button {
+  font-size: 48px;
+
+  &:nth-of-type(3) {
+    > svg {
+      @include svg.show(svg.$Svg, 0.8em); // Sassのロゴを表示する
+    }
+
+    &:hover > svg {
+      @include svg.hidden; // ボタンを押下すると要素が領域を維持したまま不可視化される(visibility: hidden 相当)
+    }
+
+    &:active > svg {
+      @include svg.null; // ボタンを押下すると要素ごと消えて復活しない
+    }
+  }
+
+  &:nth-of-type(4) {
+    > svg {
+      @include svg.null; // 要素自体を表示しない(初期描画後の一瞬は見えない要素が存在します)
+    }
+  }
+}
