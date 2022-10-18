@@ -1,6 +1,6 @@
 {
   "name": "react-sass-inlinesvg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React library designed to control SVG from Sass.",
   "keywords": [
     "React",
