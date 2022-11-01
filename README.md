@@ -5,6 +5,8 @@ This is a React library that allows you to control inline SVG (SVG in HTML) from
 This library was inspired by a great library called [react-inlinesvg].  
 It has almost the same functionality as [react-inlinesvg], but with more convenience and flexibility.
 
+View the [demo](https://misuken-now.github.io/react-sass-inlinesvg/storybook/)
+
 ## Highlight
 
 - 🏖 **Easy to use**：Just use the mixins provided
