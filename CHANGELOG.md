@@ -1,3 +1,9 @@
+#### 1.0.3 (2022-11-03)
+
+##### Documentation Changes
+
+*  update README ([c580edaa](https://github.com/misuken-now/react-sass-inlinesvg/commit/c580edaab1ea89aeecddb16c1ceb2bd99d402dcd))
+
 #### 1.0.2 (2022-11-01)
 
 ##### Continuous Integration
