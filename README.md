@@ -23,8 +23,9 @@ View the [demo](https://misuken-now.github.io/react-sass-inlinesvg/storybook/)
 | SVG coloring                                       | ✅                   | ✅                | ✅          |
 | Circular and rectangular supports                  | ✅                   | ❌                | ✅          |
 | SVG display for pseudo-elements                    | ❌                   | ❌                | ✅          |
+| Use outside of React                               | ❌                   | ❌                | ✅          |
 | IE11 Support                                       | ✅                   | ✅                | ❌          |
-| performance                                        | B                    | C                 | A           |
+| performance                                        | A                    | C                 | A+          |
 
 The following will help you in selecting a library.
 
