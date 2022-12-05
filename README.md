@@ -27,6 +27,9 @@ View the [demo](https://misuken-now.github.io/react-sass-inlinesvg/storybook/?pa
 | IE11 Support                                       | ✅                   | ✅                | ❌          |
 | performance                                        | A                    | C                 | A+          |
 
+Articles on implementation innovations and performance details.  
+https://dwango.github.io/articles/2022-12_nicolive_svg/
+
 The following will help you in selecting a library.
 
 - **react-sass-inlinesvg** - This is useful when you want to apply different styles to individual child elements within an SVG element and want to specify which SVG to display from the Sass.
