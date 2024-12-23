@@ -16,6 +16,7 @@
   "main": "./lib/index.js",
   "module": "./module/index.js",
   "typings": "./lib/index.d.ts",
+  "style": "./_index.scss",
   "files": [
     "_index.scss",
     "lib",
