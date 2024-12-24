@@ -1,3 +1,9 @@
+#### 1.0.6 (2024-12-24)
+
+##### Bug Fixes
+
+*  🐛 module resolution with rspack ([cc6ae7a6](https://github.com/misuken-now/react-sass-inlinesvg/commit/cc6ae7a6eeb208344064fc21e8f0eddde2f8d7d1))
+
 #### 1.0.5 (2022-12-05)
 
 ##### Documentation Changes
