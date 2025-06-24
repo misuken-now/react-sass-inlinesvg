@@ -18,6 +18,26 @@ const config: StorybookConfig = {
   rsbuildFinal: config => {
     return {
       ...config,
+      output: {
+        ...config.output,
+        assetPrefix: "./",
+        chunkFilename: "[contenthash].chunk.js",
+        // NOTE: 静的ファイルをiframe.htmlと同じディレクトリに出力する
+        // こうしないと、CSSからのsvg、画像、フォント類の相対パスが解決できなくなるため
+        distPath: {
+          ...config.output?.distPath,
+          js: "./",
+          jsAsync: "./",
+          css: "./",
+          cssAsync: "./",
+          svg: "./",
+          font: "./",
+          wasm: "./",
+          image: "./",
+          media: "./",
+          assets: "./",
+        },
+      },
       plugins: [
         ...(config.plugins ?? []),
         pluginNodePolyfill(),
