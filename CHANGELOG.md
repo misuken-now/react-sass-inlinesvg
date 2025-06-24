@@ -1,3 +1,18 @@
+### 1.1.0 (2025-06-24)
+
+##### Continuous Integration
+
+*  update node version ([fda0168e](https://github.com/misuken-now/react-sass-inlinesvg/commit/fda0168e7a2429d694663c067e5893e8f2036b73))
+
+##### Bug Fixes
+
+*  storybook build ([9369e158](https://github.com/misuken-now/react-sass-inlinesvg/commit/9369e1585cd56f87254e583e556b99df52ee3f50))
+* **deps:**
+  *  update yarn version ([4c6845c5](https://github.com/misuken-now/react-sass-inlinesvg/commit/4c6845c572f15188edb6de3cd3cea1826fa23e5e))
+  *  update deploy flow ([a87538f5](https://github.com/misuken-now/react-sass-inlinesvg/commit/a87538f56619ed0baccad8efed2614a0d4ddd5e9))
+  *  update test ([120827b8](https://github.com/misuken-now/react-sass-inlinesvg/commit/120827b891a6069dc33076038f2e2fc2063490ec))
+  *  update react19 ([75cab36f](https://github.com/misuken-now/react-sass-inlinesvg/commit/75cab36fd0896ef16de6860b855c37458aa55a84))
+
 #### 1.0.6 (2024-12-24)
 
 ##### Bug Fixes
