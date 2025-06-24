@@ -49,10 +49,10 @@
 
 // 表示状態から押下で非表示
 .show-click-none {
+  pointer-events: none;
+
   @include -base;
   @include svg.show(svg.$React);
-
-  pointer-events: none;
 
   :active & {
     @include svg.none;
@@ -61,10 +61,10 @@
 
 // 非表示状態から押下で表示
 .none-click-show {
+  pointer-events: none;
+
   @include -base;
   @include svg.none;
-
-  pointer-events: none;
 
   :active & {
     @include svg.show(svg.$Sass);
@@ -73,10 +73,10 @@
 
 // 表示状態から押下で要素自体を削除
 .show-click-null {
+  pointer-events: none;
+
   @include -base;
   @include svg.show(svg.$React);
-
-  pointer-events: none;
 
   :active & {
     @include svg.null;

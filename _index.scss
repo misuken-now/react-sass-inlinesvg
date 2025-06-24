@@ -154,6 +154,20 @@ $-HIDDEN_MODE_OPACITY: "opacity";
   $border-width: null,
   $border-color: null
 ) {
+  $svg-width: smart-svg.calculate-svg-size($svg-width, $width, $ratio);
+  $svg-height: smart-svg.calculate-svg-size($svg-height, $height, $ratio);
+
+  @if $border-width == null {
+    padding: calc((#{$width} - #{$svg-width}) / 2)
+    calc((#{$height} - #{$svg-width}) / 2);
+  } @else {
+    padding: calc((#{$width} - #{$svg-width} - #{$border-width}) / 2)
+    calc((#{$height} - #{$svg-width} - #{$border-width}) / 2);
+  }
+
+  // 角丸のときに欠ける場合があるので必要
+  overflow: visible;
+
   @include smart-svg.box($display, $width, $height, border-box);
   @include smart-svg.border(
     $border-radius,
@@ -165,20 +179,6 @@ $-HIDDEN_MODE_OPACITY: "opacity";
   @include -show($svg-name, $fill-color) {
     @content;
   }
-
-  $svg-width: smart-svg.calculate-svg-size($svg-width, $width, $ratio);
-  $svg-height: smart-svg.calculate-svg-size($svg-height, $height, $ratio);
-
-  @if $border-width == null {
-    padding: calc((#{$width} - #{$svg-width}) / 2)
-      calc((#{$height} - #{$svg-width}) / 2);
-  } @else {
-    padding: calc((#{$width} - #{$svg-width} - #{$border-width}) / 2)
-      calc((#{$height} - #{$svg-width} - #{$border-width}) / 2);
-  }
-
-  // 角丸のときに欠ける場合があるので必要
-  overflow: visible;
 }
 
 // 円形塗りのタイプ
