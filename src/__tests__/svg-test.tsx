@@ -12,7 +12,6 @@ import {
   getByTestId,
 } from "@testing-library/react";
 import fetchMock, { enableFetchMocks } from "jest-fetch-mock";
-import "@testing-library/jest-dom/extend-expect";
 
 import { ForTest, setup as setupSvg, ExtractProps } from "../Svg";
 enableFetchMocks();

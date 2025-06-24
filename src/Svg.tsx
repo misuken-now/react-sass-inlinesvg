@@ -1,7 +1,6 @@
 import React, { NamedExoticComponent } from "react";
 import type { ExoticComponent } from "react";
 import pSettle from "p-settle";
-import { FetchError } from "react-inlinesvg";
 import { useEffectOnce, useIsomorphicLayoutEffect } from "react-use";
 
 import {
@@ -14,7 +13,7 @@ export const animationNamePrefix = "svg_";
 
 export type SpecialName = "NULL" | "NONE" | "HIDDEN";
 export type PathMap = { [P in string]: () => string };
-export type ErrorHandler = (error: Error | FetchError) => void;
+export type ErrorHandler = (error: Error) => void;
 export type LoadHandler = (src: string, hasCache: boolean) => void;
 export type ExtractProps<T> = T extends ExoticComponent<infer P> ? P : never;
 type PartialProps = {
@@ -52,7 +51,7 @@ const State: {
       queue: {
         svgName: string;
         element: SVGSVGElement;
-        propsRef: React.RefObject<PartialProps>;
+        propsRef: React.RefObject<PartialProps | null>;
       }[];
     };
     render: { queue: { render: () => void }[] };
@@ -87,7 +86,7 @@ export function setup<T extends PathMap>(
 }
 
 export function renderStoryCatalog<N extends string>(
-  SVG: React.VFC<SvgProps<N>>,
+  SVG: React.FC<SvgProps<N>>,
   pathMap: PathMap,
   className: string,
   useDefault = false
@@ -107,13 +106,13 @@ export function renderStoryCatalog<N extends string>(
 function createSvg<T extends PathMap>(
   pathMap: T,
   { fetchOptions, uniquifyIDs, uniqueHash }: Options = {}
-): React.VFC<SvgProps<keyof T & string>> {
+): React.FC<SvgProps<keyof T & string>> {
   const options = {
     fetchOptions,
     uniquifyIDs,
     uniqueHash: uniqueHash || randomString(8),
   };
-  const Component: React.VFC<SvgProps<keyof T & string>> = ({
+  const Component: React.FC<SvgProps<keyof T & string>> = ({
     onLoad,
     onError,
     innerRef,
@@ -215,7 +214,7 @@ function useSvgName<T extends PathMap>(
   pathMap: T,
   defaultName: (keyof T & string) | undefined,
   elementRef: React.RefObject<SVGSVGElement | null>,
-  propsRef: React.RefObject<PartialProps>,
+  propsRef: React.RefObject<PartialProps | null>,
   options: InnerOptions
 ) {
   const [svgName, setSvgName] = React.useState<string | undefined>(defaultName);
@@ -251,7 +250,7 @@ function updateElement(
   element: SVGSVGElement,
   svgName: string,
   pathMap: PathMap,
-  propsRef: React.RefObject<PartialProps>,
+  propsRef: React.RefObject<PartialProps | null>,
   options: InnerOptions
 ) {
   if (svgNameIsEmptyType(svgName)) {
@@ -275,7 +274,7 @@ function updateElementByFetch(
   element: SVGSVGElement,
   svgName: string,
   pathMap: PathMap,
-  propsRef: React.RefObject<PartialProps>,
+  propsRef: React.RefObject<PartialProps | null>,
   options: InnerOptions
 ) {
   const onError = propsRef.current?.onError || null;
@@ -392,7 +391,7 @@ function updateElementForError(element: SVGSVGElement, svgName: string) {
 function updateElementByCache(
   element: SVGSVGElement,
   svgName: string,
-  propsRef: React.RefObject<PartialProps>,
+  propsRef: React.RefObject<PartialProps | null>,
   options: InnerOptions,
   src: string,
   hasCache = true
@@ -470,7 +469,7 @@ function aggregateProcess<T>(
   state.queue.push(data);
   if (state.queue.length === 1) {
     // 次の処理の予約
-    function reserve(timerMs: number, pos = 0) {
+    const  reserve = (timerMs: number, pos = 0)  => {
       setTimeout(() => {
         const nextPos = pos + unitSize;
         run(state.queue.slice(pos, nextPos));
