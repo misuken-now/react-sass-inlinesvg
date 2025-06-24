@@ -8,9 +8,10 @@ import {
   fireEvent,
   screen,
   waitFor,
-  getByTitle,
-  getByTestId,
 } from "@testing-library/react";
+import "@testing-library/dom";
+import "@testing-library/jest-dom";
+
 import fetchMock, { enableFetchMocks } from "jest-fetch-mock";
 
 import { ForTest, setup as setupSvg, ExtractProps } from "../Svg";
@@ -284,30 +285,30 @@ describe("Svg", () => {
       it("初期状態では呼び出されていないこと", () => {
         const fn = jest.fn();
         setup({ props: { onLoad: fn } });
-        expect(fn).toBeCalledTimes(0);
+        expect(fn).toHaveBeenCalledTimes(0);
       });
       it("SVG読み込み完了時に呼び出されること", async () => {
         const fn = jest.fn();
         const { root } = setup({ props: { onLoad: fn } });
         const element = root.query();
         emit(element, "FooIcon");
-        expect(fn).toBeCalledTimes(0);
+        expect(fn).toHaveBeenCalledTimes(0);
         await waitForAnimationStart();
-        expect(fn).toBeCalledTimes(0);
+        expect(fn).toHaveBeenCalledTimes(0);
         await waitForDomUpdate();
-        expect(fn).toBeCalledTimes(1);
+        expect(fn).toHaveBeenCalledTimes(1);
         expect(fn.mock.calls[0][0]).toBe(pathMap.FooIcon());
         expect(fn.mock.calls[0][1]).toBe(false);
         emit(element, "BarIcon");
-        expect(fn).toBeCalledTimes(1);
+        expect(fn).toHaveBeenCalledTimes(1);
         await waitForAnimationStart();
-        expect(fn).toBeCalledTimes(1);
+        expect(fn).toHaveBeenCalledTimes(1);
         await waitForDomUpdate();
-        expect(fn).toBeCalledTimes(2);
+        expect(fn).toHaveBeenCalledTimes(2);
         expect(fn.mock.calls[1][0]).toBe(pathMap.BarIcon());
         expect(fn.mock.calls[1][1]).toBe(false);
         await change(element, "FooIcon");
-        expect(fn).toBeCalledTimes(3);
+        expect(fn).toHaveBeenCalledTimes(3);
         expect(fn.mock.calls[2][0]).toBe(pathMap.FooIcon());
         expect(fn.mock.calls[2][1]).toBe(true);
       });
@@ -317,14 +318,14 @@ describe("Svg", () => {
       it("初期状態では呼び出されていないこと", () => {
         const fn = jest.fn();
         setup({ props: { onError: fn } });
-        expect(fn).toBeCalledTimes(0);
+        expect(fn).toHaveBeenCalledTimes(0);
       });
       it("未定義のアニメーション名でonErrorが発生すること", () => {
         const fn = jest.fn();
         const { root } = setup({ props: { onError: fn } });
         const element = root.query();
         emit(element, "ThrowError");
-        expect(fn).toBeCalledTimes(1);
+        expect(fn).toHaveBeenCalledTimes(1);
         expect(fn.mock.calls[0][0]).toBeInstanceOf(TypeError);
         expect(fn.mock.calls[0][0].message).toBe(
           `unknown svgName "ThrowError"`
@@ -631,7 +632,7 @@ function expect_complete(element: Element | null, svgName: string) {
 
 // jestにAnimationEventが存在しないのでmockを追加
 // https://gitanswer.com/fireevent-animationend-with-animationname-event-animationname-is-undefined-javascript-react-testing-library-842276564
-global.AnimationEvent = class AnimationEvent
+globalThis.AnimationEvent = class AnimationEvent
   extends Event
   implements AnimationEvent
 {
