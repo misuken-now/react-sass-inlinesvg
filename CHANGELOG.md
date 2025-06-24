@@ -1,3 +1,9 @@
+#### 1.1.1 (2025-06-24)
+
+##### Chores
+
+*  fix yarn version ([36817af0](https://github.com/misuken-now/react-sass-inlinesvg/commit/36817af0f3d69019f12618a207a1b0a4d166b04a))
+
 ### 1.1.0 (2025-06-24)
 
 ##### Continuous Integration
