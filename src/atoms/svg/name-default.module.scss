@@ -8,7 +8,7 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
 }
 
 .plane-fill {
-  @include show(null, 56px, #000);
+  @include show(null, 56px, #00f);
 }
 
 // circle
@@ -17,7 +17,7 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
 }
 
 .circle-fill {
-  @include show-circle(null, 56px, #ddd, #000);
+  @include show-circle(null, 56px, #ddd, #00f);
 }
 
 .circle-border {
@@ -25,7 +25,7 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
 }
 
 .circle-fill-border {
-  @include show-circle(null, 56px, #ddd, #000, $border-width: 4px);
+  @include show-circle(null, 56px, #ddd, #00f, $border-width: 4px);
 }
 
 // square
@@ -38,7 +38,7 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
     null,
     56px,
     $background-image: $background-image,
-    $fill-color: #000
+    $fill-color: #00f
   );
 }
 
@@ -57,6 +57,6 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
     56px,
     $border-width: 4px,
     $background-image: $background-image,
-    $fill-color: #000
+    $fill-color: #00f
   );
 }

@@ -38,7 +38,7 @@ export const StylingPattern = () => (
   <>
     <section>
       <h1>Plane & Fill</h1>
-      <SVG defaultName="Svg" className={nameDefaultClassNames.plane} />
+      <SVG defaultName="StorybookIcon" className={nameDefaultClassNames.plane} />
       &nbsp;
       <SVG className={nameSvgClassNames.plane} />
       &nbsp;
@@ -48,7 +48,7 @@ export const StylingPattern = () => (
     </section>
     <section>
       <h1>+ Background</h1>
-      <SVG defaultName="Svg" className={nameDefaultClassNames.circle} />
+      <SVG defaultName="StorybookIcon" className={nameDefaultClassNames.circle} />
       &nbsp;
       <SVG className={nameSvgClassNames.circle} />
       &nbsp;
@@ -56,7 +56,7 @@ export const StylingPattern = () => (
       &nbsp;
       <SVG className={nameSvgClassNames.circleFill} />
       <br />
-      <SVG defaultName="Svg" className={nameDefaultClassNames.square} />
+      <SVG defaultName="StorybookIcon" className={nameDefaultClassNames.square} />
       &nbsp;
       <SVG className={nameSvgClassNames.square} />
       &nbsp;
@@ -66,7 +66,7 @@ export const StylingPattern = () => (
     </section>
     <section>
       <h1>+ Border</h1>
-      <SVG defaultName="Svg" className={nameDefaultClassNames.circleBorder} />
+      <SVG defaultName="StorybookIcon" className={nameDefaultClassNames.circleBorder} />
       &nbsp;
       <SVG className={nameSvgClassNames.circleBorder} />
       &nbsp;
@@ -77,7 +77,7 @@ export const StylingPattern = () => (
       &nbsp;
       <SVG className={nameSvgClassNames.circleFillBorder} />
       <br />
-      <SVG defaultName="Svg" className={nameDefaultClassNames.squareBorder} />
+      <SVG defaultName="StorybookIcon" className={nameDefaultClassNames.squareBorder} />
       &nbsp;
       <SVG className={nameSvgClassNames.squareBorder} />
       &nbsp;

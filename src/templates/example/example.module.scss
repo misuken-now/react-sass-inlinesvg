@@ -15,7 +15,7 @@
   }
 
   &:active .svg {
-    @include svg.show(svg.$Svg); // ボタンを押下するとSVGのロゴを表示する
+    @include svg.show(svg.$StorybookIcon); // ボタンを押下するとStorybookのロゴを表示する
   }
 }
 
@@ -27,12 +27,12 @@
   }
 
   &:hover .svg {
-    @include svg.show(svg.$Svg);
+    @include svg.show(svg.$StorybookIcon);
   }
 
   &:hover .svg,
     // チラツキ防止用のセレクタ(ホバー終了後、まだSVGが書き換わっていない瞬間)
-    &:not(:hover) .svg[data-svg-name="#{svg.$Svg}"] {
+    &:not(:hover) .svg[data-svg-name="#{svg.$StorybookIcon}"] {
     fill: gray; // ボタンにホバーするとSVGの色が変わる
   }
 
@@ -46,7 +46,7 @@
 
   &:nth-of-type(3) {
     > svg {
-      @include svg.show(svg.$Svg, 0.8em); // Sassのロゴを表示する
+      @include svg.show(svg.$StorybookIcon, 0.8em); // Storybookのロゴを表示する
     }
 
     &:hover > svg {

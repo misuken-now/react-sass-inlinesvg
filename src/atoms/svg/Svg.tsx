@@ -4,7 +4,7 @@ export type SvgProps = ExtractProps<typeof SVG>;
 export const { SVG, pathMap } = setup({
   React: () => "https://cdn.svgporn.com/logos/react.svg",
   Sass: () => "https://cdn.svgporn.com/logos/sass.svg",
-  Svg: () => "https://cdn.svgporn.com/logos/svg.svg",
+  StorybookIcon: () => "https://cdn.svgporn.com/logos/storybook-icon.svg",
 
   AndroidIcon: () => "https://cdn.svgporn.com/logos/android-icon.svg",
   Apple: () => "https://cdn.svgporn.com/logos/apple.svg",
@@ -53,7 +53,6 @@ export const { SVG, pathMap } = setup({
   SlackIcon: () => "https://cdn.svgporn.com/logos/slack-icon.svg",
   StackoverflowIcon: () =>
     "https://cdn.svgporn.com/logos/stackoverflow-icon.svg",
-  StorybookIcon: () => "https://cdn.svgporn.com/logos/storybook-icon.svg",
   Terminal: () => "https://cdn.svgporn.com/logos/terminal.svg",
   TiktokIcon: () => "https://cdn.svgporn.com/logos/tiktok-icon.svg",
   Twitter: () => "https://cdn.svgporn.com/logos/twitter.svg",
