@@ -1,3 +1,21 @@
+#### 1.1.2 (2025-11-12)
+
+##### Chores
+
+*  update ignore ([3546d85d](https://github.com/misuken-now/react-sass-inlinesvg/commit/3546d85db4f3861240c4b7177ca6ef54dd64e99a))
+
+##### Continuous Integration
+
+*  update github-pages-deploy ([7645ec64](https://github.com/misuken-now/react-sass-inlinesvg/commit/7645ec64819740dfe755131f402e5a8ce4f803b8))
+
+##### Bug Fixes
+
+*  resolve sass-loader warnings ([c32c9a9f](https://github.com/misuken-now/react-sass-inlinesvg/commit/c32c9a9f94ba3675e9b381c1e13f64edac6ca52c))
+
+##### Tests
+
+*  update storybook demo ([809b3df3](https://github.com/misuken-now/react-sass-inlinesvg/commit/809b3df37d83a3e49d73247ef479fa0358ea9740))
+
 #### 1.1.1 (2025-06-24)
 
 ##### Chores
