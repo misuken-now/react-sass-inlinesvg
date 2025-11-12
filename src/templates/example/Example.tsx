@@ -14,7 +14,7 @@ export const Example = () => {
         <SVG className={classNames.svg} /> Sass
       </button>
       <button className={classNames.button}>
-        <SVG /> SVG
+        <SVG /> Storybook
       </button>
       <button className={classNames.button}>
         <SVG /> NULL

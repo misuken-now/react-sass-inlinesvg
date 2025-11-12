@@ -4,33 +4,33 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
 
 // plane
 .plane {
-  @include show($Svg, 56px);
+  @include show($StorybookIcon, 56px);
 }
 
 .plane-fill {
-  @include show($React, 56px, #000);
+  @include show($React, 56px, #00f);
 }
 
 // circle
 .circle {
-  @include show-circle($Svg, 56px, #ddd);
+  @include show-circle($StorybookIcon, 56px, #ddd);
 }
 
 .circle-fill {
-  @include show-circle($React, 56px, #ddd, #000);
+  @include show-circle($React, 56px, #ddd, #00f);
 }
 
 .circle-border {
-  @include show-circle($Svg, 56px, #ddd, $border-width: 4px);
+  @include show-circle($StorybookIcon, 56px, #ddd, $border-width: 4px);
 }
 
 .circle-fill-border {
-  @include show-circle($React, 56px, #ddd, #000, $border-width: 4px);
+  @include show-circle($React, 56px, #ddd, #00f, $border-width: 4px);
 }
 
 // square
 .square {
-  @include show-square($Svg, 56px, $background-image: $background-image);
+  @include show-square($StorybookIcon, 56px, $background-image: $background-image);
 }
 
 .square-fill {
@@ -38,13 +38,13 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
     $React,
     56px,
     $background-image: $background-image,
-    $fill-color: #000
+    $fill-color: #00f
   );
 }
 
 .square-border {
   @include show-square(
-    $Svg,
+    $StorybookIcon,
     56px,
     $border-width: 4px,
     $background-image: $background-image
@@ -57,6 +57,6 @@ $background-image: linear-gradient(180deg, #eee 0%, #888 100%);
     56px,
     $border-width: 4px,
     $background-image: $background-image,
-    $fill-color: #000
+    $fill-color: #00f
   );
 }
