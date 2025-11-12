@@ -183,7 +183,8 @@ $-HIDDEN_MODE_OPACITY: "opacity";
 
 // 円形塗りのタイプ
 @mixin show-circle($args...) {
-  @include show-square($args..., $border-radius: 50%) {
+  $rest: (border-radius: 50%);
+  @include show-square($args..., $rest...) {
     @content;
   }
 }
