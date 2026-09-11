@@ -53,9 +53,9 @@ $-HIDDEN_MODE_OPACITY: "opacity";
 
   // トリガーセレクタ: animationstartイベントを発動するために使用されるセレクター
   // - animationstartイベントのハンドリングで、要素へsvgNameが反映された瞬間に適用が解除されます
-  &[data-svg-status]::before#{$suffix} {
-    // NOTE: contentも変更しないとFirefoxではanimationstartが発生しません
-    content: "#{$svg-name}";
+  // NOTE: Firefox 154以降はsvg要素の::beforeが生成されずanimationstartも発火しないため、
+  // 擬似要素ではなく要素自体にアニメーションを設定する必要があります。
+  &[data-svg-status]#{$suffix} {
     // アニメーションはpaused指定されているので、長い時間に指定しても問題ありません。
     // 逆に短すぎると処理に負荷が掛かっているときにアニメーションがスキップされるので注意。
     animation: svg_#{$svg-name} 1s paused !important;

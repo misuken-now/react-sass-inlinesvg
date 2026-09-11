@@ -495,7 +495,7 @@ A title for your SVG. It will override an existing `<title>` tag.
 2. Add `<style>` containing `@keyframes` to `<head>`.
 3. Start listening for animation.
    - `<svg className="svg" aria-busy="true" data-svg-status="loading"></svg>`
-4. The `animation` event of `<svg>` element's `::before` fires.
+4. The `animationstart` event of the `<svg>` element fires.
 5. Event handling.
    1. Extract SVG names from `event.animationName`.
    2. Resolve URL from SVG name and fetch
@@ -571,6 +571,12 @@ This can be handled by applying a style that specifies that the hover condition 
 Any browsers that support inlining [SVGs](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) and [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) and [animationstart](https://developer.mozilla.org/en-US/docs/Web/API/Element/animationstart_event) will work.
 
 If you need to support legacy browsers you'll need to include a polyfiil for `fetch` and `Number.isNaN` in your app. Take a look at [react-app-polyfill](https://www.npmjs.com/package/react-app-polyfill) or [polyfill.io](https://polyfill.io/v3/).
+
+### Constraint on the `animation` property
+
+The mixins reserve the `animation` property of the `<svg>` element to trigger `animationstart`. Do not apply your own CSS animation to the same `<svg>` element, as it overrides the SVG switching trigger.
+
+Until v1.1.2 the trigger was placed on the `::before` pseudo-element, but Firefox 154 and later no longer generate `::before` on SVG elements, so the trigger moved to the element itself.
 
 ## CORS
 
