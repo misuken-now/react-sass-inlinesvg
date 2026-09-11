@@ -1,3 +1,9 @@
+#### 1.1.3 (2026-09-11)
+
+##### Bug Fixes
+
+*  Firefox 154以降でSVGが読み込まれない問題を修正 ([ac0a0afe](https://github.com/misuken-now/react-sass-inlinesvg/commit/ac0a0afe7abc716f52ebbbf6d3e36e8f744927aa))
+
 #### 1.1.2 (2025-11-12)
 
 ##### Chores
