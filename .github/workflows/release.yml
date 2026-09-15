@@ -25,6 +25,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ inputs.release-tag || github.ref }}
           fetch-depth: 0
 
       - name: Set up Node.js
@@ -45,17 +46,23 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         env:
           RELEASE_TAG: ${{ inputs.release-tag }}
-        run: test "$RELEASE_TAG" = "$GITHUB_REF_NAME"
+        run: |
+          case "$RELEASE_TAG" in
+            v*) ;;
+            *) echo "release-tag must start with v" >&2; exit 1 ;;
+          esac
 
       - name: Verify tag commit is on main
+        env:
+          RELEASE_TAG: ${{ inputs.release-tag || github.ref_name }}
         run: |
           git fetch origin main --no-tags
-          RELEASE_COMMIT="$(git rev-parse "${GITHUB_REF}^{commit}")"
+          RELEASE_COMMIT="$(git rev-parse "refs/tags/$RELEASE_TAG^{commit}")"
           git merge-base --is-ancestor "$RELEASE_COMMIT" origin/main
 
       - name: Verify package version
         env:
-          RELEASE_TAG: ${{ github.ref_name }}
+          RELEASE_TAG: ${{ inputs.release-tag || github.ref_name }}
         run: |
           test "v$(node -p "require('./package.json').version")" = "$RELEASE_TAG"
 
@@ -105,5 +112,16 @@ jobs:
       - name: Use npm 11.19.1 or later
         run: npm install --global npm@11.19.1 --ignore-scripts
 
+      - name: Extract package
+        run: |
+          mkdir -p staged-package
+          tar -xzf package/*.tgz --strip-components=1 -C staged-package
+
+      - name: Verify staged package version
+        env:
+          RELEASE_TAG: ${{ inputs.release-tag || github.ref_name }}
+        run: test "v$(node -p "require('./staged-package/package.json').version")" = "$RELEASE_TAG"
+
       - name: Stage package
-        run: npm stage publish package/*.tgz
+        working-directory: staged-package
+        run: npm stage publish
