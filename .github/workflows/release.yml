@@ -87,5 +87,5 @@ jobs:
       - name: Use npm 11.19.1 or later
         run: npm install --global npm@11.19.1 --ignore-scripts
 
-      - name: Publish package
-        run: npm publish package/*.tgz
+      - name: Stage package
+        run: npm stage publish package/*.tgz
