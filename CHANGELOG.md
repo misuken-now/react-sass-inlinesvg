@@ -1,3 +1,13 @@
+#### 1.1.4 (2026-09-15)
+
+##### Continuous Integration
+
+*  finalize releases after merge ([e6809930](https://github.com/misuken-now/react-sass-inlinesvg/commit/e6809930d741c9f0c56f26af2ab0c18ec6584194))
+*  prepare corepack before yarn usage ([944482df](https://github.com/misuken-now/react-sass-inlinesvg/commit/944482dfe74f64d4e3c52efd4d840d739dc999a8))
+*  automate releases from main ([006874a2](https://github.com/misuken-now/react-sass-inlinesvg/commit/006874a25b346c0975a66bb7a619715e09cb2671))
+*  use npm staged publishing ([a6964535](https://github.com/misuken-now/react-sass-inlinesvg/commit/a69645359acbcb20db094d4465077cb870d86719))
+*  enable npm trusted publishing ([eb09a384](https://github.com/misuken-now/react-sass-inlinesvg/commit/eb09a384db71e829e87a4fdf36b67b37d94ac6b8))
+
 #### 1.1.3 (2026-09-11)
 
 ##### Bug Fixes
