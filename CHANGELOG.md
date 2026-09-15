@@ -1,3 +1,9 @@
+#### 1.1.5 (2026-09-15)
+
+##### Continuous Integration
+
+*  stage extracted package ([2ce2afe7](https://github.com/misuken-now/react-sass-inlinesvg/commit/2ce2afe739aa0f43375b3504a6497a23e07cbbbd))
+
 #### 1.1.4 (2026-09-15)
 
 ##### Continuous Integration
